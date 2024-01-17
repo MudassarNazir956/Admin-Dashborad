@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>Hello Everyone!</h1>
+        </div>
+
+        <div id="genUsers" class="block">
+            <h2>Users Information/Details:</h2>
+            <p style="margin: 18px 0px;">We've Following users availability in our list:</p>
+            <div id="usersList"></div>
+        </div>
+
+        <div id="addUser" class="block">
+            <h2>Add User</h2>
+            <form onsubmit="return addUser()">
+                <input type="text" placeholder="Your Name" id="username">
+                <input type="email" placeholder="Your Email" id="email">
+                <input type="password" placeholder="Enter Your Password" id="password">
+                <input type="submit" value="Add User">
+            </form>
+        </div>
+
+        <div id="delUser" class="block">
+            <h2>Delete User</h2>
+            <form onsubmit="return deleteUser()">
+                <input type="email" placeholder="Enter User Email" id="delEmail">
+                <input type="submit" value="Delete User">
+            </form>
+        </div>
+
+        <div id="login" class="block">
+            <h2>Login</h2>
+            <form onsubmit="return login()">
+                <input type="email" placeholder="Your Email" id="loginEmail">
+                <input type="password" placeholder="Your Password" id="loginPassword">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+
+        <div id="left">
+            <button onclick="generateList()">Users List</button>
+            <button onclick="toggleScreen('addUser');">Add User</button>
+            <button onclick="toggleScreen('delUser');">Delete User</button>
+            <hr>
+            <button onclick="toggleScreen('login');">Login</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
